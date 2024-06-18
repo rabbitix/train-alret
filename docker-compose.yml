@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  alert_process:
+    image: docker.io/library/alert-process:${DOCKER_IMAGE_VERSION}
+    container_name: alert_process
+    env_file:
+      - '.env'
+    command: python -m main
